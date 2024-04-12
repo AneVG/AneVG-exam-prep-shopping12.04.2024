@@ -35,10 +35,15 @@ jobs:
       with:
         node-version: 16.x
         cache: 'npm'
+    - name: install npm dependencies
+      run: npm install
     - name: install playwright dependencies
       run: npx playwright install
+    - name: install express
+      run: npm install express
     - name: start the app
       run: npm start
     - name: run ui tests
       run: npm run test:ui
+
  
